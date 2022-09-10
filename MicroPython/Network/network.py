@@ -1,8 +1,8 @@
-def internet(ssid, pasw): 					#fungsi internet
-    import network							#include library network
+def internet(ssid, pasw): 					
+    import network							
     wlan = network.WLAN(network.STA_IF)		#membuat starus jaringan
-    wlan.active(True)						#mengaktifkan WiFi
-    if not wlan.isconnected():				# logika menghubungkan jaringan
+    wlan.active(True)						
+    if not wlan.isconnected():				
         print("connect to wlan ...")		
         wlan.connect(ssid, pasw)
         while not wlan.isconnected():
